@@ -1,5 +1,37 @@
-<div class="container">
-  <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
-  </h1>
+<div class="row border-bottom">
+  <div class="col border-right">
+    <small>Prima: {{ file.originalSize }}</small>
+  </div>
+  <div class="col">
+    <small>Dopo: {{ file.modifiedSize }}</small>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div
+      class="dragzone"
+      draggable="true"
+      (dragover)="onDragover($event)"
+      (dragleave)="onDragleave($event)"
+      (drop)="onDrop($event)"
+      [ngClass]="{ dragover: dragzone.dragover }"
+    >
+      <div class="waiting-drop">
+        <div class="row mt-4">
+          <div class="col text-center">
+            <i class="icon ion-ios-image display-3"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <small><b>Trascina o clicca qui</b></small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <small>Risparmiati: {{ file.modifiedSize }}</small>
+    </div>
+  </div>
 </div>

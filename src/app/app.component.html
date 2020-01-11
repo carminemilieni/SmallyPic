@@ -1,1 +1,22 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand navbar-light sticky-top  bg-toolbar d-block">
+  <div class="row title">
+    <div class="col text-center"><small>SmallyPic</small></div>
+  </div>
+  <div class="row toolbar">
+    <div class="col">
+      <div class="custom-control custom-switch">
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          id="customSwitch1"
+        />
+        <label class="custom-control-label uk-text-small" for="customSwitch1"
+          ><small>Override</small></label
+        >
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="container" class="container">
+  <router-outlet></router-outlet>
+</div>

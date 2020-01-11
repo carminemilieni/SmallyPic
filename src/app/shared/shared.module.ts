@@ -6,10 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PageNotFoundComponent } from './components/';
 import { WebviewDirective } from './directives/';
 import { FormsModule } from '@angular/forms';
-
+import { NgDragDropModule } from 'ng-drag-drop';
 @NgModule({
   declarations: [PageNotFoundComponent, WebviewDirective],
-  imports: [CommonModule, TranslateModule, FormsModule],
-  exports: [TranslateModule, WebviewDirective, FormsModule]
+  imports: [CommonModule, TranslateModule, FormsModule, NgDragDropModule.forRoot()],
+  exports: [TranslateModule, WebviewDirective, FormsModule, NgDragDropModule]
 })
-export class SharedModule {}
+export class SharedModule { }

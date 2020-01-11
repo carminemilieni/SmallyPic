@@ -1,7 +1,92 @@
+$color1: rgba(225, 225, 225, 1);
+$color2: rgba(74, 74, 75, 1);
+$color3: rgba(118, 213, 251, 1);
+$color4: rgba(255, 255, 255, 1);
+$color5: #f5f5f4;
+
+$primary: $color3 !default;
+//$secondary: $color3 !default;
+// $success: $green !default;
+// $info: $cyan !default;
+// $warning: $yellow !default;
+// $danger: $red !default;
+// $light: $gray-100 !default;
+// $dark: $gray-800 !default;
+
+$body-bg: $color5;
+$body-color: $color2;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/ng-drag-drop/style.css";
+$ionicons-font-path: "~ionicons/dist/fonts";
+@import "~ionicons/dist/scss/ionicons.scss";
+
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-
   height: 100%;
+  //  overflow-y: hidden;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
+}
+
+.bg-toolbar {
+  background-image: linear-gradient(to bottom, #e8e6e8 0, #d1cfd1 100%);
+  border-bottom: 1px solid #c2c0c2;
+}
+
+#container {
+  -webkit-app-region: no-drag;
+  // height: 100%;
+}
+
+$dragWidth: 200px;
+$dragHeight: 200px;
+
+div.dragzone {
+  width: $dragWidth;
+  height: $dragHeight;
+  border: 3px dashed;
+  margin: 20px auto;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 10000;
+}
+
+div.dragzone.dragover,
+div.dragzone.drop {
+  border-color: $primary;
+  color: $primary;
+}
+
+div.dragzone input {
+  width: $dragWidth;
+  height: $dragHeight;
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  -webkit-app-region: drag;
+  -webkit-user-drag: element;
+  cursor: copy;
+}
+
+div.dragzone > div {
+  width: $dragWidth;
+  height: $dragHeight;
+  position: absolute;
+  z-index: 0;
+}
+
+nav,
+nav * {
+  -webkit-app-region: drag;
 }

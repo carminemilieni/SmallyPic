@@ -1,11 +1,11 @@
 {
-  "name": "angular-electron",
-  "version": "6.4.1",
-  "description": "Angular 8 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "name": "smallypic",
+  "version": "0.0.1",
+  "description": "Images minimizer, designed for speeder web designer!",
+  "homepage": "https://github.com/carminemilieni/SmallyPic",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "Carmine Milieni - Full Stack Developer",
+    "email": "carmine.milieni@gmail.com"
   },
   "keywords": [
     "angular",
@@ -88,5 +88,12 @@
   },
   "engines": {
     "node": ">=10.9.0"
+  },
+  "dependencies": {
+    "@ng-bootstrap/ng-bootstrap": "5.1.4",
+    "bootstrap": "4.4.1",
+    "ionicons": "4.6.3",
+    "ng-drag-drop": "5.0.0",
+    "pretty-bytes": "5.3.0"
   }
 }
